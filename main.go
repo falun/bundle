@@ -5,8 +5,8 @@ import (
 	"log"
 	"path/filepath"
 
-	"github.com/falun/bundle/app"
-	"github.com/falun/bundle/manifest"
+	"github.com/falun/gobundle/app"
+	"github.com/falun/gobundle/manifest"
 )
 
 func main() {

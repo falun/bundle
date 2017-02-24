@@ -7,9 +7,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/falun/bundle/manifest"
-	"github.com/falun/bundle/raw"
-	"github.com/falun/bundle/zip"
+	"github.com/falun/gobundle/manifest"
+	"github.com/falun/gobundle/raw"
+	"github.com/falun/gobundle/zip"
 )
 
 func getBundle(pkg string, files []manifest.File) string {

@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"log"
 
-	"github.com/falun/bundle/manifest"
+	"github.com/falun/gobundle/manifest"
 )
 
 func Save(files []manifest.File) []byte {

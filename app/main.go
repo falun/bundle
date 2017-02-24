@@ -1,7 +1,7 @@
 package app
 
 import (
-	"github.com/falun/bundle/manifest"
+	"github.com/falun/gobundle/manifest"
 )
 
 func Main(pwd, dest, pkg string, mf manifest.Manifest) {
