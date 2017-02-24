@@ -12,11 +12,11 @@ import (
 func main() {
 	var (
 		pkg  = "bundle"
-		dest = "./bundle"
+		dest = "bundle"
 	)
 
 	flag.StringVar(&pkg, "package", pkg, "the generated code will be part of this package")
-	flag.StringVar(&dest, "dest", dest, "produce generated code into this directory")
+	flag.StringVar(&dest, "dest", dest, "produce generated code into this directory; relative to the current working directory")
 	flag.Parse()
 
 	args := flag.Args()

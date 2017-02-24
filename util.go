@@ -8,7 +8,7 @@ import (
 )
 
 func dirMustExist(dest string) {
-	err := os.MkdirAll(dest, 0644)
+	err := os.MkdirAll(dest, 0744)
 	if err != nil {
 		log.Fatalf("Unable to create %v: %v", dest, err.Error())
 	}

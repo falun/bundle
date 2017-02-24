@@ -87,7 +87,7 @@ import (
 )
 
 func writeFile(path string, contents []byte) error {
-	err := os.MkdirAll(filepath.Dir(path), 644)
+	err := os.MkdirAll(filepath.Dir(path), 744)
 	if err != nil {
 		return err
 	}
