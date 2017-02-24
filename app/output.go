@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
-	"os"
 	"path/filepath"
 
 	"github.com/falun/gobundle/manifest"
@@ -61,7 +60,7 @@ func WriteBundle(dest, pkg string, mf manifest.Manifest) {
 	err := ioutil.WriteFile(
 		filepath.Join(dest, "contents.go"),
 		[]byte(contents),
-		os.FileMode(644))
+		0622)
 
 	if err != nil {
 		log.Fatalf("unable to write bundle contents: %v", err.Error())
@@ -70,7 +69,7 @@ func WriteBundle(dest, pkg string, mf manifest.Manifest) {
 
 func WriteLib(dest, pkg string) {
 	libWithPkg := []byte(fmt.Sprintf(bundleLib, pkg))
-	err := ioutil.WriteFile(filepath.Join(dest, "bundle.go"), libWithPkg, 644)
+	err := ioutil.WriteFile(filepath.Join(dest, "bundle.go"), libWithPkg, 0622)
 	if err != nil {
 		log.Fatalf("unable to write bundle library: %v", err.Error())
 	}
@@ -87,12 +86,12 @@ import (
 )
 
 func writeFile(path string, contents []byte) error {
-	err := os.MkdirAll(filepath.Dir(path), 744)
+	err := os.MkdirAll(filepath.Dir(path), 0744)
 	if err != nil {
 		return err
 	}
 
-	err = ioutil.WriteFile(path, contents, 644)
+	err = ioutil.WriteFile(path, contents, 0622)
 	if err != nil {
 		return err
 	}
