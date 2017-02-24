@@ -1,0 +1,8 @@
+{
+  "root": ".",
+  "files": [
+    {"path": "main.go", "compress": true},
+    {"path": "util.go", "compress": false},
+    {"path": "app/main.go", "compress": false}
+  ]
+}
